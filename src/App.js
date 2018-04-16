@@ -7,26 +7,13 @@ import './App.css'
 import QuestionContainer from './components/QuestionContainer/QuestionContainer'
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      questions: [
-        { question: 'How do I use your site?', answer: 'Just figure it out' }
-      ]
-    }
-  }
   render() {
     return (
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/apartments/estimate" component={EstimateForm} />
-          <Route
-            path="/faq"
-            render={() => (
-              <QuestionContainer questions={this.state.questions} />
-            )}
-          />
+          <Route path="/apartments/new" render={() => <EstimateForm />} />
+          <Route path="/questions" render={() => <QuestionContainer />} />
           <Route path="/" component={Intro} />
         </Switch>
       </div>

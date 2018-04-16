@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Intro extends Component {
   render() {
@@ -9,7 +10,8 @@ class Intro extends Component {
             <h3>For Renters:</h3>
             <p>
               Use this tool to get a market-based rent estimate for your next
-              Washington, DC apartment. Click here to get started!
+              Washington, DC apartment. Click{' '}
+              <Link to="/apartments/new">here</Link> to get started!
             </p>
           </div>
           <div>
@@ -17,11 +19,11 @@ class Intro extends Component {
             <p>
               Renting out your basement or condo? Use the tool to get the best
               value for your property based on similar rentals in your area.
-              Click here to get started!
+              Click <Link to="/apartments/new">here</Link> to get started!
             </p>
           </div>
         </div>
-        <div>
+        <div className="content">
           <h3>Questions?</h3>
           <p>Check out the FAQ for more information!</p>
         </div>
