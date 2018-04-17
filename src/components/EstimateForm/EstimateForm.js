@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 
 class EstimateForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {}
 
     this.handleInput = this.handleInput.bind(this)
@@ -20,8 +21,9 @@ class EstimateForm extends Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault()
     axios
-      .post('http://localhost:3001/apartments', {
+      .post('http://localhost:3001/apartments/estimates', {
         type: this.state.type,
         baths: this.state.baths,
         bedrooms: this.state.bedrooms,
@@ -29,11 +31,10 @@ class EstimateForm extends Component {
         parking: this.state.parking,
         neighborhood: this.state.neighborhood
       })
-      .then(() =>
-        this.setState({
-          apartment: {}
-        })
-      )
+      .then(res => {
+        this.props.setID(res.data)
+        this.props.history.push(`/apartments/estimate/${res.data}`)
+      })
   }
 
   componentDidMount() {}
@@ -96,4 +97,4 @@ class EstimateForm extends Component {
   }
 }
 
-export default EstimateForm
+export default withRouter(EstimateForm)
