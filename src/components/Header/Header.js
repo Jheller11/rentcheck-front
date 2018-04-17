@@ -6,8 +6,8 @@ class Header extends Component {
     return (
       <div className="header">
         <header>
-          <img src="/logo.png" alt="logo" />
-          <h1>RentCheck</h1>
+          <h1>RentCheck DC</h1>
+          <img className="logo" src="/logo.png" alt="logo" />
         </header>
         <div>
           <nav>

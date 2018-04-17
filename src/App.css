@@ -2,6 +2,11 @@ header > * {
   display: inline-block;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -16,6 +21,9 @@ header > * {
 .estimate {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
 }
 
 nav {
@@ -26,7 +34,8 @@ nav {
   padding: 10px 0;
 }
 
-nav > a {
+nav > a,
+footer > a {
   text-decoration: none;
   color: #576066;
 }
@@ -66,6 +75,12 @@ select {
 
 h1 {
   color: #2c514c;
+  margin: auto 0;
+  margin-left: 10%;
+}
+
+.logo {
+  margin-right: 10%;
 }
 
 h3 {
@@ -77,4 +92,15 @@ h4 {
 }
 p {
   color: #2c514c;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
 }

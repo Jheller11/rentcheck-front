@@ -4,8 +4,10 @@ import Header from './components/Header/Header'
 import Intro from './components/Intro/Intro'
 import EstimateForm from './components/EstimateForm/EstimateForm'
 import Estimate from './components/Estimate/Estimate'
+import Footer from './components/Footer/Footer'
 import './App.css'
 import QuestionContainer from './components/QuestionContainer/QuestionContainer'
+import ApartmentContainer from './components/ApartmentContainer/ApartmentContainer'
 
 class App extends Component {
   constructor() {
@@ -35,8 +37,10 @@ class App extends Component {
             render={() => <Estimate id={this.state.id} />}
           />
           <Route path="/questions" render={() => <QuestionContainer />} />
+          <Route path="/questions" render={() => <ApartmentContainer />} />
           <Route path="/" component={Intro} />
         </Switch>
+        <Footer />
       </div>
     )
   }

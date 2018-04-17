@@ -77,18 +77,46 @@ class EstimateForm extends Component {
             <label htmlFor="apartment">Parking Spots:</label>
             <select name="parking" onChange={this.handleInput}>
               <option> </option>
+              <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
-              <option value="3">3</option>
             </select>
           </div>
           <div className="form-row">
             <label htmlFor="apartment">Neighborhood:</label>
-            <input
-              type="text"
-              name="neighborhood"
-              onChange={this.handleInput}
-            />
+            <select name="neighborhood" onChange={this.handleInput}>
+              <option> </option>
+              <option value="5">Dupont Circle</option>
+              <option value="5">Georgetown</option>
+              <option value="5">Logan Circle</option>
+              <option value="5">Shaw</option>
+              <option value="5">Mt. Vernon</option>
+              <option value="4">Downtown</option>
+              <option value="4">Foggy Bottom</option>
+              <option value="4">AU/Tenleytown</option>
+              <option value="4">U St.</option>
+              <option value="4">Adams Morgan</option>
+              <option value="3">Friendship Heights</option>
+              <option value="3">Chevy Chase</option>
+              <option value="3">Cleveland Park</option>
+              <option value="3">Woodley Park</option>
+              <option value="3">Glover Park</option>
+              <option value="3">Southwest</option>
+              <option value="3">Capitol Hill</option>
+              <option value="3">Mt. Pleasant</option>
+              <option value="3">Columbia Heights</option>
+              <option value="3">Petworth</option>
+              <option value="2">Brookland</option>
+              <option value="2">Brightwood</option>
+              <option value="2">Ft. Totten</option>
+              <option value="2">Stadium-Armory</option>
+              <option value="2">Brentwood</option>
+              <option value="2">Ledroit Park</option>
+              <option value="2">Takoma</option>
+              <option value="1">Anacostia</option>
+              <option value="1">Deanwood</option>
+              <option value="3">Other</option>
+            </select>
           </div>
           <input type="submit" />
         </form>
