@@ -74,7 +74,7 @@ class EstimateForm extends Component {
             </select>
           </div>
           <div className="form-row">
-            <label htmlFor="apartment">Parking Sports:</label>
+            <label htmlFor="apartment">Parking Spots:</label>
             <select name="parking" onChange={this.handleInput}>
               <option> </option>
               <option value="1">1</option>

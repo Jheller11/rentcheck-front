@@ -55,7 +55,7 @@ class QuestionContainer extends Component {
       }
     })
     return (
-      <div>
+      <div className="faq">
         <h3>F.A.Q.</h3>
         <div>{questions}</div>
         <div>

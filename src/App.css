@@ -9,6 +9,10 @@ header > * {
   margin: 0 auto;
 }
 
+.column {
+  padding: 20px;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -19,7 +23,7 @@ nav {
 
 nav > a {
   text-decoration: none;
-  color: black;
+  color: #576066;
 }
 
 a:hover {
@@ -46,6 +50,26 @@ form {
   margin: 20px 0;
 }
 
+.faq {
+  width: 80%;
+  margin: 0 auto;
+}
+
 select {
   width: 200px;
+}
+
+h1 {
+  color: #2c514c;
+}
+
+h3 {
+  color: #576066;
+}
+
+h4 {
+  color: #2c514c;
+}
+p {
+  color: #2c514c;
 }
