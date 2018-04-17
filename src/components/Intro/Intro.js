@@ -10,7 +10,7 @@ class Intro extends Component {
             <h3>For Renters:</h3>
             <p>
               Use this tool to get a market-based rent estimate for your next
-              Washington, DC apartment. Click{' '}
+              Washington, DC apartment. Click
               <Link to="/apartments/new">here</Link> to get started!
             </p>
           </div>

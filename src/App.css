@@ -13,6 +13,11 @@ header > * {
   padding: 20px;
 }
 
+.estimate {
+  display: flex;
+  flex-direction: row;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
