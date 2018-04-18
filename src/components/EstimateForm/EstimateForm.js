@@ -23,7 +23,7 @@ class EstimateForm extends Component {
   handleSubmit(e) {
     e.preventDefault()
     axios
-      .post('http://localhost:3001/apartments/estimates', {
+      .post('http://localhost:3001/apartments/estimate', {
         type: this.state.type,
         baths: this.state.baths,
         bedrooms: this.state.bedrooms,

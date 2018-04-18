@@ -11,7 +11,7 @@ class Estimate extends Component {
   }
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/apartments/estimates/${this.state.id}`)
+      .get(`http://localhost:3001/apartments/estimate/${this.state.id}`)
       .then(res => {
         let apartment = res.data[0]
         this.setState({
@@ -21,7 +21,24 @@ class Estimate extends Component {
   }
   render() {
     let display
+    let category
     if (this.state.data) {
+      switch (parseInt(this.state.data.bedrooms)) {
+        case 0:
+          category = 'studios'
+          break
+        case 1:
+          category = '1-bedrooms'
+          break
+        case 2:
+          category = '2-bedrooms'
+          break
+        case 3:
+          category = '3-bedrooms'
+          break
+        default:
+          break
+      }
       display = (
         <main>
           <div className="estimate">
@@ -48,7 +65,13 @@ class Estimate extends Component {
           <div>
             <h3>Search for matching apartments on:</h3>
             <p>
-              <a href="https://www.apartments.com/washington-dc/studios-1-bathrooms-1301-to-1800/">
+              <a
+                href={`https://www.apartments.com/washington-dc/${category}-${
+                  this.state.data.baths
+                }-bathrooms-${parseInt(this.state.data.rent) -
+                  100}-to-${parseInt(this.state.data.rent) + 100}/`}
+                target="_blank"
+              >
                 Apartments.com
               </a>
             </p>
