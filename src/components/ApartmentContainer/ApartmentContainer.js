@@ -32,9 +32,27 @@ class ApartmentContainer extends Component {
         {
           Header: 'Parking Spots',
           accessor: 'parking'
+        },
+        {
+          Header: 'Delete',
+          accessor: '_id',
+          Cell: props => (
+            <button
+              onSubmit={this.handleDelete(props.value)}
+              className="number"
+            >
+              Delete Apt.
+            </button>
+          )
         }
       ]
     }
+  }
+
+  handleDelete(id) {
+    axios.delete(`http://localhost:3001/apartments/${id}`).then(() => {
+      console.log('deleted')
+    })
   }
 
   componentDidMount() {
