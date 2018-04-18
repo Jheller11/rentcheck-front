@@ -13,7 +13,7 @@ class Header extends Component {
           <nav>
             <Link to="/">Home</Link>
             <Link to="/apartments/new">Get My Estimate</Link>
-            <Link to="/neighborhoods">Neighborhood Info</Link>
+            <Link to="/neighborhoods">Neighborhood Map</Link>
             <Link to="/questions">Frequently Asked Questions</Link>
           </nav>
         </div>

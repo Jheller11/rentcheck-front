@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import './App.css'
 import QuestionContainer from './components/QuestionContainer/QuestionContainer'
 import ApartmentContainer from './components/ApartmentContainer/ApartmentContainer'
+import Map from './components/Map/Map'
 
 class App extends Component {
   constructor() {
@@ -37,7 +38,8 @@ class App extends Component {
             render={() => <Estimate id={this.state.id} />}
           />
           <Route path="/questions" render={() => <QuestionContainer />} />
-          <Route path="/questions" render={() => <ApartmentContainer />} />
+          <Route path="/apartments" render={() => <ApartmentContainer />} />
+          <Route path="/neighborhoods" render={() => <Map />} />
           <Route path="/" component={Intro} />
         </Switch>
         <Footer />

@@ -23,6 +23,7 @@ var data = [
 ]
 
 class Graph extends Component {
+  componentDidMount() {}
   render() {
     return (
       <div>

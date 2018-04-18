@@ -103,4 +103,25 @@ footer {
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
+  background-color: white;
+}
+
+.table {
+  width: 90%;
+  margin: 0 auto;
+  height: 90%;
+}
+
+.map > img {
+  width: 100%;
+}
+
+.total {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
 }
