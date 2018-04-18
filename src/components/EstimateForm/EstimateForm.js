@@ -5,7 +5,14 @@ import axios from 'axios'
 class EstimateForm extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      baths: 0,
+      type: '',
+      bedrooms: 0,
+      size: 0,
+      parking: 0,
+      neighborhood: 1
+    }
 
     this.handleInput = this.handleInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)

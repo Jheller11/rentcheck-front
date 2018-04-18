@@ -5,6 +5,7 @@ import Graph from '../Graph/Graph'
 class Estimate extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       id: this.props.id
     }
@@ -59,7 +60,7 @@ class Estimate extends Component {
             </div>
             <div>
               <h3>BREAKDOWN:</h3>
-              <Graph apartment={this.state.data} />
+              <Graph apartment={this.state.data} mlr={this.props.mlr} />
             </div>
           </div>
           <div>

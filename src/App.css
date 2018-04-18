@@ -26,6 +26,10 @@ header {
   margin: 0 auto;
 }
 
+.estimate > * {
+  margin: 0 10px;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
