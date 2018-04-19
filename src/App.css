@@ -11,17 +11,6 @@ header {
   justify-content: space-between;
 }
 
-.intro {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.column {
-  padding: 20px;
-}
-
 .estimate {
   display: flex;
   flex-direction: column;
@@ -32,6 +21,7 @@ header {
 
 .estimate > * {
   margin: 20px 0;
+  border-bottom: 1px solid blue;
 }
 
 nav {
@@ -40,6 +30,8 @@ nav {
   border-bottom: 1px black solid;
   border-top: 1px black solid;
   padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 nav > a,
@@ -53,10 +45,20 @@ a:hover {
   transform: translate(-3px, -3px);
 }
 
-.content {
+.flex {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px grey solid;
+}
+
+.flex > img {
+  width: 45%;
+  height: 300px;
+  border: 1px grey groove;
 }
 
 form {
@@ -104,15 +106,16 @@ p {
 
 footer {
   border-top: 1px solid;
-  width: 100%;
+  width: 90%;
   text-align: center;
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
   background-color: white;
+  margin: 0 auto;
 }
 .fill {
-  min-height: 200px;
+  min-height: 50px;
 }
 
 .table {
@@ -120,8 +123,16 @@ footer {
   margin: 20px auto;
   height: 90%;
 }
+
+.map {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 100px;
+}
+
 .map > img {
-  width: 75%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .total {
