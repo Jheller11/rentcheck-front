@@ -87,6 +87,17 @@ class Estimate extends Component {
                   Apartments.com
                 </a>
               </p>
+              <p>
+                <a
+                  href={`https://washingtondc.craigslist.org/search/doc/apa?min_price=${parseInt(
+                    this.state.data.rent
+                  ) - 100}&max_price=${parseInt(this.state.data.rent) +
+                    100}&availabilityMode=0&sale_date=all+dates`}
+                  target="_blank"
+                >
+                  craigslist
+                </a>
+              </p>
             </div>
           </div>
         </main>
