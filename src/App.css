@@ -1,3 +1,7 @@
+.App {
+  height: 100%;
+}
+
 header > * {
   display: inline-block;
 }
@@ -99,8 +103,6 @@ p {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   border-top: 1px solid;
   width: 100%;
   text-align: center;
@@ -109,15 +111,17 @@ footer {
   justify-content: space-around;
   background-color: white;
 }
+.fill {
+  min-height: 200px;
+}
 
 .table {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
   height: 90%;
 }
-
 .map > img {
-  width: 100%;
+  width: 75%;
 }
 
 .total {

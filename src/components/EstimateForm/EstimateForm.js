@@ -30,7 +30,7 @@ class EstimateForm extends Component {
   handleSubmit(e) {
     e.preventDefault()
     axios
-      .post('http://localhost:3001/apartments/estimate', {
+      .post('http://localhost:3001/apartments/estimates', {
         type: this.state.type,
         baths: this.state.baths,
         bedrooms: this.state.bedrooms,
@@ -40,7 +40,7 @@ class EstimateForm extends Component {
       })
       .then(res => {
         this.props.setID(res.data)
-        this.props.history.push(`/apartments/estimate/${res.data}`)
+        this.props.history.push(`/apartments/estimates/${res.data}`)
       })
   }
 
@@ -49,6 +49,7 @@ class EstimateForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <h3>Fill out this form to receive your estimate!</h3>
           <div className="form-row">
             <label htmlFor="apartment">I am a:</label>
             <select name="type" onChange={this.handleInput}>

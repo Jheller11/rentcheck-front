@@ -6,7 +6,28 @@ class QuestionContainer extends Component {
   constructor() {
     super()
     this.state = {
-      questions: [],
+      questions: [
+        {
+          question: 'How is the estimate generated?',
+          answer:
+            'RentCheck DC uses a multivariate linear regression to develop a model based on numerous available apartment listings.  The data a user submits is compared to the model and a monthly rental price is generated.'
+        },
+        {
+          question: 'How accurate is the estimate?',
+          answer:
+            'It depends...the data is biased slightly towards luxury apartment buildings because of the current data set.  We are working on adding a broader range of data.  Apartments in older buildings and/or further from metro stations will fall towards the low end of the estimate or possibly below it.'
+        },
+        {
+          question: 'Can I save my estimates?',
+          answer:
+            'Not yet, we are working on creating user profiles to allow you to save your searches and/or receive results by email.'
+        },
+        {
+          question: 'Can I see the data?',
+          answer:
+            'Yes, the data is available via a link in the footer of this page.'
+        }
+      ],
       newQuestion: ''
     }
     this.handleInput = this.handleInput.bind(this)
@@ -34,7 +55,7 @@ class QuestionContainer extends Component {
   }
 
   componentDidMount() {
-    let questions = []
+    let questions = this.state.questions
     axios
       .get('http://localhost:3001/questions')
       .then(res => {

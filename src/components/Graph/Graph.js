@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-const PieChart = require('react-chartjs').Pie
+const PieChart = require('react-chartjs').Doughnut
 
 class Graph extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       data: undefined
     }

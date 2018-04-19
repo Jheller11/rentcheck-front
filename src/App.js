@@ -10,6 +10,7 @@ import './App.css'
 import QuestionContainer from './components/QuestionContainer/QuestionContainer'
 import ApartmentContainer from './components/ApartmentContainer/ApartmentContainer'
 import Map from './components/Map/Map'
+import EstimateContainer from './components/EstimatesContainer/EstimatesContainer'
 
 class App extends Component {
   constructor() {
@@ -46,14 +47,20 @@ class App extends Component {
             render={props => <EstimateForm {...props} setID={this.setID} />}
           />
           <Route
-            path="/apartments/estimate"
+            path="/apartments/estimates/:id"
             render={() => <Estimate id={this.state.id} mlr={this.state.mlr} />}
+          />
+          <Route
+            path="/apartments/estimates"
+            render={() => <EstimateContainer />}
           />
           <Route path="/questions" render={() => <QuestionContainer />} />
           <Route path="/apartments" render={() => <ApartmentContainer />} />
+
           <Route path="/neighborhoods" render={() => <Map />} />
           <Route path="/" component={Intro} />
         </Switch>
+        <div className="fill" />
         <Footer />
       </div>
     )

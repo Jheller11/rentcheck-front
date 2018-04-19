@@ -5,14 +5,13 @@ import Graph from '../Graph/Graph'
 class Estimate extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       id: this.props.id
     }
   }
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/apartments/estimate/${this.state.id}`)
+      .get(`http://localhost:3001/apartments/estimates/${this.state.id}`)
       .then(res => {
         let apartment = res.data[0]
         this.setState({

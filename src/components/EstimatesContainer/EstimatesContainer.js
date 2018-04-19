@@ -3,16 +3,16 @@ import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 import axios from 'axios'
 
-class ApartmentContainer extends Component {
+class EstimateContainer extends Component {
   constructor() {
     super()
     this.state = {
-      apartments: [],
-      count: 0,
+      estimates: [],
       columns: [
         {
           Header: 'Price',
-          accessor: 'rent'
+          accessor: 'rent',
+          Cell: props => <span className="number">{parseInt(props.value)}</span>
         },
         {
           Header: 'Bedrooms',
@@ -44,23 +44,25 @@ class ApartmentContainer extends Component {
   }
 
   handleDelete(id) {
-    axios.delete(`http://localhost:3001/apartments/${id}`).then(() => {
-      this.componentDidMount()
-    })
+    axios
+      .delete(`http://localhost:3001/apartments/estimates/${id}`)
+      .then(() => {
+        this.componentDidMount()
+      })
   }
 
   componentDidMount() {
-    let apartments = []
+    let estimates = []
     axios
-      .get('http://localhost:3001/apartments')
+      .get('http://localhost:3001/apartments/estimates')
       .then(res => {
-        res.data.forEach(apt => {
-          apartments.push(apt)
+        res.data.forEach(est => {
+          estimates.push(est)
         })
       })
       .then(() =>
         this.setState({
-          apartments: apartments
+          estimates: estimates
         })
       )
   }
@@ -76,7 +78,7 @@ class ApartmentContainer extends Component {
               }
             }
           }}
-          data={this.state.apartments}
+          data={this.state.estimates}
           columns={this.state.columns}
           defaultPageSize={10}
         />
@@ -85,4 +87,4 @@ class ApartmentContainer extends Component {
   }
 }
 
-export default ApartmentContainer
+export default EstimateContainer
