@@ -18,7 +18,14 @@ class ApartmentData extends Component {
           {
             label: 'Price',
             fillColor: 'red',
-            data: [1656, 2028, 2542, 2576, 2091, this.props.apartment.rent]
+            data: [
+              1656,
+              2028,
+              2542,
+              2576,
+              2091,
+              parseInt(this.props.apartment.rent)
+            ]
           },
           {
             label: 'Square Feet',

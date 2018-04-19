@@ -44,9 +44,9 @@ class Estimate extends Component {
         <main>
           <div className="estimate">
             <div>
-              <div className="total">
-                <h3>ESTIMATED MONTHLY PRICE:</h3>
-                <h3>
+              <div>
+                <h3>Estimated Monthly Price:</h3>
+                <h3 className="total">
                   ${parseInt(this.state.data.rent) - 100} - ${parseInt(
                     this.state.data.rent
                   ) + 100}
@@ -59,27 +59,31 @@ class Estimate extends Component {
               <p>Neighborhood Rating: {this.state.data.neighborhood}</p>
             </div>
             <div>
-              <h3>BREAKDOWN:</h3>
+              <h3>Breakdown:</h3>
               <Graph apartment={this.state.data} mlr={this.props.mlr} />
+              <p>
+                Hover over a section to see the impact each input has on the
+                overall price.
+              </p>
             </div>
-          </div>
-          <div>
-            <h3>Average Price/Size for Washington, D.C.</h3>
-            <ApartmentData apartment={this.state.data} />
-          </div>
-          <div>
-            <h3>Search for matching apartments on:</h3>
-            <p>
-              <a
-                href={`https://www.apartments.com/washington-dc/${category}-${
-                  this.state.data.baths
-                }-bathrooms-${parseInt(this.state.data.rent) -
-                  100}-to-${parseInt(this.state.data.rent) + 100}/`}
-                target="_blank"
-              >
-                Apartments.com
-              </a>
-            </p>
+            <div>
+              <h3>Average Price/Size for Washington, D.C.</h3>
+              <ApartmentData apartment={this.state.data} />
+            </div>
+            <div>
+              <h3>Search for matching apartments on:</h3>
+              <p>
+                <a
+                  href={`https://www.apartments.com/washington-dc/${category}-${
+                    this.state.data.baths
+                  }-bathrooms-${parseInt(this.state.data.rent) -
+                    100}-to-${parseInt(this.state.data.rent) + 100}/`}
+                  target="_blank"
+                >
+                  Apartments.com
+                </a>
+              </p>
+            </div>
           </div>
         </main>
       )
