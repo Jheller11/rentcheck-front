@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Graph from '../Graph/Graph'
+import ApartmentData from '../ApartmentData/ApartmentData'
 
 class Estimate extends Component {
   constructor(props) {
@@ -61,6 +62,10 @@ class Estimate extends Component {
               <h3>BREAKDOWN:</h3>
               <Graph apartment={this.state.data} mlr={this.props.mlr} />
             </div>
+          </div>
+          <div>
+            <h3>Average Price/Size for Washington, D.C.</h3>
+            <ApartmentData apartment={this.state.data} />
           </div>
           <div>
             <h3>Search for matching apartments on:</h3>
