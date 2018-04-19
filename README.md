@@ -13,9 +13,8 @@ This project was developed as a tool for Washington D.C. area renters and landlo
 
 ## Deployed Application:
 
-* Application:
-* API:    (Repository: https://github.com/Jheller11/rentcheck-back)
-
+* Application: https://rentcheck-dc.surge.sh/
+* API: https://rentcheck-dc.herokuapp.com/apartments (Repository: https://github.com/Jheller11/rentcheck-back)
 
 ## How to Use:
 
@@ -26,21 +25,23 @@ This project was developed as a tool for Washington D.C. area renters and landlo
 
 ## How the Estimate is created:
 
-* I used a multivariate linear regression from ml.js (details: https://github.com/mljs/regression-multivariate-linear) to generate a model for my estimates by providing the following  inputs and outputs for known apartment listings:
+* I used a multivariate linear regression from ml.js (details: https://github.com/mljs/regression-multivariate-linear) to generate a model for my estimates by providing the following inputs and outputs for known apartment listings:
 
-*  Inputs:
-  1. Number of Bedrooms
-  2. Number of Bathrooms
-  3. Apartment Size (sq. ft.)
-  4. Number of Parking Spots (if any are included in listed rent price)
-  5. Neighborhood (categorized 1-5 based on median rents, 5 is for the most desirable neighborhoods)
+* Inputs:
+
+1.  Number of Bedrooms
+2.  Number of Bathrooms
+3.  Apartment Size (sq. ft.)
+4.  Number of Parking Spots (if any are included in listed rent price)
+5.  Neighborhood (categorized 1-5 based on median rents, 5 is for the most desirable neighborhoods)
 
 * Output:
-  1. Monthly Rent
+
+  * Monthly Rent
 
 * After creating the model, I now simply pass in user input for Inputs 1-5 above and generate an Output equal to the monthly rent estimate.
 
 ## Limitations
 
-1. Data - I am working on adding more data from a wider variety of neighborhoods.  The current sample is not large enough to ensure accuracy.
-2. Bias - The current sample is biased towards luxury apartment buildings/close to metro.  Therefore, estimates have a tendency to come in slightly higher.  I am working on adding additional inputs to adjust the model.
+1.  Data - I am working on adding more data from a wider variety of neighborhoods. The current sample is not large enough to ensure accuracy.
+2.  Bias - The current sample is biased towards luxury apartment buildings/close to metro. Therefore, estimates have a tendency to come in slightly higher. I am working on adding additional inputs to adjust the model.
