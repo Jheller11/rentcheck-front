@@ -44,15 +44,17 @@ class ApartmentContainer extends Component {
   }
 
   handleDelete(id) {
-    axios.delete(`http://localhost:3001/apartments/${id}`).then(() => {
-      this.componentDidMount()
-    })
+    axios
+      .delete(`https://rentcheck-dc.herokuapp.com/apartments/${id}`)
+      .then(() => {
+        this.componentDidMount()
+      })
   }
 
   componentDidMount() {
     let apartments = []
     axios
-      .get('http://localhost:3001/apartments')
+      .get('https://rentcheck-dc.herokuapp.com/apartments')
       .then(res => {
         res.data.forEach(apt => {
           apartments.push(apt)

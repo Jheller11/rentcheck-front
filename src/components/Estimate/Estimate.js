@@ -11,7 +11,11 @@ class Estimate extends Component {
   }
   componentDidMount() {
     axios
-      .get(`http://localhost:3001/apartments/estimates/${this.state.id}`)
+      .get(
+        `https://rentcheck-dc.herokuapp.com/apartments/estimates/${
+          this.state.id
+        }`
+      )
       .then(res => {
         let apartment = res.data[0]
         this.setState({

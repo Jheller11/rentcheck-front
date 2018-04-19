@@ -45,7 +45,7 @@ class EstimateContainer extends Component {
 
   handleDelete(id) {
     axios
-      .delete(`http://localhost:3001/apartments/estimates/${id}`)
+      .delete(`https://rentcheck-dc.herokuapp.com/apartments/estimates/${id}`)
       .then(() => {
         this.componentDidMount()
       })
@@ -54,7 +54,7 @@ class EstimateContainer extends Component {
   componentDidMount() {
     let estimates = []
     axios
-      .get('http://localhost:3001/apartments/estimates')
+      .get('https://rentcheck-dc.herokuapp.com/apartments/estimates')
       .then(res => {
         res.data.forEach(est => {
           estimates.push(est)

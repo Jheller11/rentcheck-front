@@ -28,7 +28,7 @@ class App extends Component {
     })
   }
   componentDidMount() {
-    axios.get(`http://localhost:3001/apartments/mlr`).then(res => {
+    axios.get(`https://rentcheck-dc.herokuapp.com/apartments/mlr`).then(res => {
       let mlr = res.data.weights.map(array => {
         return array[0]
       })

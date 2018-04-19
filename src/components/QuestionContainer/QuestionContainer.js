@@ -44,7 +44,7 @@ class QuestionContainer extends Component {
 
   handleSubmit(e) {
     axios
-      .post('http://localhost:3001/questions', {
+      .post('https://rentcheck-dc.herokuapp.com/questions', {
         question: this.state.newQuestion
       })
       .then(() =>
@@ -57,7 +57,7 @@ class QuestionContainer extends Component {
   componentDidMount() {
     let questions = this.state.questions
     axios
-      .get('http://localhost:3001/questions')
+      .get('https://rentcheck-dc.herokuapp.com/questions')
       .then(res => {
         res.data.forEach(question => {
           questions.push(question)
