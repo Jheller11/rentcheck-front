@@ -45,6 +45,11 @@ footer > a {
   display: inline;
 }
 
+.calc {
+  width: 45%;
+  height: 300px;
+}
+
 .navlinks:hover {
   text-decoration: underline;
   transform: translate(-3px, -3px);
