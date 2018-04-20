@@ -103,7 +103,8 @@ h1 {
 .logo {
   margin-right: 10%;
   width: 240px;
-  height: 160px;
+  height: 140px;
+  padding-bottom: 10px;
 }
 
 h3 {

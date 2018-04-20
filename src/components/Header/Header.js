@@ -9,7 +9,7 @@ class Header extends Component {
           <h1>Rent Check DC</h1>
           <img
             className="logo"
-            src="https://cdn.pixabay.com/photo/2012/04/11/15/40/flag-28572_1280.png"
+            src="https://i.pinimg.com/originals/16/48/87/16488728a4c771820775fb00b5bf5c32.gif"
             alt="logo"
           />
         </header>
