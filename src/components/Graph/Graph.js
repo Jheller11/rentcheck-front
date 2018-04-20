@@ -10,64 +10,35 @@ class Graph extends Component {
   }
 
   componentDidMount() {
+    let apartment = this.props.apartment
+    let mlr = this.props.mlr
     this.setState({
       data: [
         {
           value: parseInt(
-            (this.props.apartment.bedrooms + 1) *
-              (this.props.mlr[0] + this.props.mlr[1]) *
-              0.6 /
-              this.props.apartment.rent *
-              100
+            apartment.bedrooms * mlr[0] + apartment.size * mlr[2] - 80
           ),
           color: 'red',
-          highlight: '#FF5A5E',
-          label: 'Bedrooms (%)'
+          highlight: '#F99B02',
+          label: 'Bedrooms/Size ($)'
         },
         {
-          value: parseInt(
-            this.props.apartment.baths *
-              (this.props.mlr[0] + this.props.mlr[1]) *
-              0.4 /
-              this.props.apartment.rent *
-              100
-          ),
+          value: parseInt(apartment.baths * mlr[1] - 80),
           color: 'blue',
-          highlight: '#FF5A5E',
-          label: 'Bathrooms (%)'
+          highlight: '#7D01F9',
+          label: 'Bathrooms ($)'
         },
         {
-          value: parseInt(
-            this.props.apartment.size *
-              this.props.mlr[2] /
-              this.props.apartment.rent *
-              100
-          ),
-          color: 'green',
-          highlight: '#FF5A5E',
-          label: 'Size (%)'
-        },
-        {
-          value: parseInt(
-            this.props.apartment.parking *
-              this.props.mlr[3] /
-              this.props.apartment.rent *
-              100
-          ),
+          value: parseInt(apartment.parking * mlr[3]),
           color: 'grey',
           highlight: '#FF5A5E',
-          label: 'Parking (%)'
+          label: 'Parking ($)'
         },
         {
-          value: parseInt(
-            (this.props.apartment.neighborhood * this.props.mlr[4] +
-              this.props.mlr[5]) /
-              this.props.apartment.rent *
-              100
-          ),
-          color: 'orange',
-          highlight: '#FF5A5E',
-          label: 'Location (%)'
+          value: parseInt(apartment.neighborhood * mlr[4] - 80),
+          color: '#21BA33',
+          highlight: '#01F91D',
+          label: 'Location ($)'
         }
       ]
     })
