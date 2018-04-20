@@ -49,11 +49,13 @@ class Estimate extends Component {
           <div className="estimate">
             <div>
               <div>
-                <h3>Estimated Monthly Price:</h3>
-                <h3 className="total">
-                  ${parseInt(this.state.data.rent) - 100} - ${parseInt(
-                    this.state.data.rent
-                  ) + 100}
+                <h3 className="inline">
+                  Estimated Monthly Price:{' '}
+                  <h3 className="total inline">
+                    ${parseInt(this.state.data.rent) - 100} - ${parseInt(
+                      this.state.data.rent
+                    ) + 100}
+                  </h3>
                 </h3>
               </div>
               <p>Bedrooms: {this.state.data.bedrooms}</p>
@@ -106,10 +108,10 @@ class Estimate extends Component {
       display = 'No Estimate Found.  Please go back and try again.'
     }
     return (
-      <div>
+      <main>
         <h3>Estimate Details:</h3>
         {display}
-      </div>
+      </main>
     )
   }
 }

@@ -41,6 +41,10 @@ footer > a {
   padding: 5px;
 }
 
+.inline {
+  display: inline;
+}
+
 .navlinks:hover {
   text-decoration: underline;
   transform: translate(-3px, -3px);
