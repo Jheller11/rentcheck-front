@@ -6,15 +6,27 @@ class Header extends Component {
     return (
       <div className="header">
         <header>
-          <h1>RentCheck DC</h1>
-          <img className="logo" src="/logo.png" alt="logo" />
+          <h1>Rent Check DC</h1>
+          <img
+            className="logo"
+            src="https://cdn.pixabay.com/photo/2012/04/11/15/40/flag-28572_1280.png"
+            alt="logo"
+          />
         </header>
         <div>
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="/apartments/new">Get My Estimate</Link>
-            <Link to="/neighborhoods">Neighborhood Map</Link>
-            <Link to="/questions">Frequently Asked Questions</Link>
+            <div className="navlinks">
+              <Link to="/">Home</Link>
+            </div>
+            <div className="navlinks">
+              <Link to="/apartments/new">Get My Estimate</Link>
+            </div>
+            <div className="navlinks">
+              <Link to="/neighborhoods">Neighborhood Map</Link>
+            </div>
+            <div className="navlinks">
+              <Link to="/questions">Frequently Asked Questions</Link>
+            </div>
           </nav>
         </div>
       </div>

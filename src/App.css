@@ -34,13 +34,14 @@ nav {
   margin: 0 auto;
 }
 
-nav > a,
+.navlinks > a,
 footer > a {
   text-decoration: none;
   color: #576066;
+  padding: 5px;
 }
 
-a:hover {
+.navlinks:hover {
   text-decoration: underline;
   transform: translate(-3px, -3px);
 }
@@ -84,13 +85,16 @@ select {
 }
 
 h1 {
-  color: #2c514c;
+  color: rgb(176, 35, 24);
   margin: auto 0;
   margin-left: 10%;
+  text-decoration: underline;
 }
 
 .logo {
   margin-right: 10%;
+  width: 240px;
+  height: 160px;
 }
 
 h3 {
